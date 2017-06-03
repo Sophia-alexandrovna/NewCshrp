@@ -1,0 +1,31 @@
+int a;
+            a = int.Parse(Console.ReadLine());
+            int[] first = new int[a];
+            Random rnd = new Random();
+            for (int i = 0; i<a;i++)
+            { first[i] = rnd.Next(10,31); }
+            int[] second = new int[a];
+            for (int i = 0; i <a; i++)
+            { second[i] = rnd.Next(10, 31); }
+            int[] third = new int[a];
+            int s = 0;
+            int max = third[0];
+            int min = third[0];
+            for (int i = 0; i <a; i++)
+            { third[i] = first[i] + second[i];
+                Console.WriteLine(third[i]);
+                s += third[i];
+                if (third[i] >= max)
+                {
+                    max = third[i];
+                }
+                 else
+                {
+                    min = third[i];
+                }
+            }
+            int mid = s / a;
+
+            Console.WriteLine("crednee: " + mid + " maximal'noe " + max + " minimal'noe  " + min);
+            Console.ReadKey();
+            //Объявить три массива. Первые два заполнить случайными значениями от 10 до 30. В элементы третьего массива записать сумму соответствующих элементов первых двух массивов. (в нулевую ячейку третьего — сумму нулевых ячеек первого и второго массивов и так далее). Затем найти среднее арифметическое элементов третьего массива, максимальное значение и минимальное значение, которые он хранит.
