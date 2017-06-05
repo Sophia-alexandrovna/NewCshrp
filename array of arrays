@@ -1,0 +1,26 @@
+ Random rnd = new Random();
+            int[][] arr = new int[3][];
+
+            arr[0] = new int[3];
+            arr[1] = new int[2];
+            arr[2] = new int[5];
+             
+            
+            for (int i = 0; i < arr[0].Length; i++)
+            {
+                arr[0][i] = rnd.Next(0, 2);
+                Console.WriteLine(arr[0][i]);
+            }
+            for (int i = 0; i < arr[1].Length; i++)
+            {
+                arr[1][i] = rnd.Next(2, 4);
+                Console.WriteLine(arr[1][i]);
+            }
+            for (int i = 0; i < arr[2].Length; i++)
+            {
+                arr[2][i] = rnd.Next(4, 6);
+                Console.WriteLine(arr[2][i]);
+            }
+
+           
+            Console.ReadKey();
